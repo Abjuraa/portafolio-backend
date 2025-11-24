@@ -13,6 +13,6 @@ app.use(cors({
 
 app.use(express.json())
 
-app.use("/resend", resendRoutes)
+app.use("/api", resendRoutes)
 
 export default app

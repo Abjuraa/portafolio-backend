@@ -3,6 +3,6 @@ import { sendEmail } from "../controller/resend.controller.js";
 
 const router = Router();
 
-router.post("/email", sendEmail)
+router.post("/mail-service", sendEmail)
 
 export default router;
