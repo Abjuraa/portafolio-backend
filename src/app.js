@@ -1,6 +1,7 @@
 import express from 'express';
 import cors from 'cors';
 import resendRoutes from './routes/resend.routes.js'
+import { swaggerSpec, swaggerUi } from './swagger.js';
 
 const app = express();
 
@@ -14,5 +15,7 @@ app.use(cors({
 app.use(express.json())
 
 app.use("/api", resendRoutes)
+
+app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec))
 
 export default app
